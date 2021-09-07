@@ -67,7 +67,10 @@ const DashboardLayout = ({ children }) => {
           <Typography variant="h6" className={classes.title}>
             News
           </Typography>
-          <Button color="inherit" onClick={() => history.push('/auth/login')}>Login</Button>
+          <Button color="inherit" onClick={() => {
+            localStorage.clear();
+            history.push('/auth/login')
+          }}>Logout</Button>
         </Toolbar>
       </AppBar>
       <Drawer

@@ -46,7 +46,9 @@ const LoginPage = () => {
           variant="contained"
           color="primary"
           onClick={() => {
-            localStorage.setItem('AUTH_TOKEN', new Date().toLocaleTimeString())
+            // Request token to server by email & password
+            const tokenFromServer = 'initokendummy'
+            localStorage.setItem('AUTH_TOKEN', tokenFromServer);
             history.push("/");
           }}
         >
